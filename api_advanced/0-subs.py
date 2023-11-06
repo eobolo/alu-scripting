@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+
 Write a function that queries the Reddit API
 https://www.reddit.com/dev/api/
 and returns the number of subscribers
@@ -10,6 +11,7 @@ the function should return 0.
 Hint: No authentication is necessary for most features
 of the Reddit API. If you’re getting errors related to
 Too Many Requests, ensure you’re setting a custom User-Agent.
+
 """
 
 
