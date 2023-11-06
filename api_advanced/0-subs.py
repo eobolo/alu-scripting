@@ -12,13 +12,12 @@ of the Reddit API. If you’re getting errors related to
 Too Many Requests, ensure you’re setting a custom User-Agent.
 """
 
-import json
-import urllib.error
-import urllib.parse
-import urllib.request
-
 
 def number_of_subscribers(subreddit):
+    import json
+    import urllib.error
+    import urllib.parse
+    import urllib.request
     # create a url
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     # create a request object
