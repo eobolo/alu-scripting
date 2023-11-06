@@ -1,16 +1,38 @@
 #!/usr/bin/python3
 """
+Reddit API Subreddit Subscribers Query Module
 
-Write a function that queries the Reddit API
-https://www.reddit.com/dev/api/
-and returns the number of subscribers
-(not active users, total subscribers) for a
-given subreddit. If an invalid subreddit is given,
-the function should return 0.
+This module defines a function that queries the
+Reddit API to retrieve the number of subscribers
+for a given subreddit.
 
-Hint: No authentication is necessary for most features
-of the Reddit API. If you’re getting errors related to
-Too Many Requests, ensure you’re setting a custom User-Agent.
+If the subreddit is valid, the function returns
+the number of subscribers. If an invalid subreddit
+is given or if there are
+any errors during the API request, the function returns 0.
+
+The Reddit API does not require authentication for most features
+To prevent "Too Many Requests" errors, a custom User-Agent
+header is set in the request.
+
+Usage:
+    1. Ensure you have the necessary modules installed
+    (json, urllib.error, urllib.parse, urllib.request).
+    2. Call the `number_of_subscribers(subreddit)`
+    function with the desired subreddit name to
+    retrieve the subscriber count.
+
+Parameters:
+    subreddit (str): The name of the subreddit for
+    which you want to retrieve the subscriber count.
+
+Returns:
+    int: The number of subscribers for the specified subreddit.
+    Returns 0 for invalid subreddits or in case of errors.
+
+Example:
+    subscribers = number_of_subscribers("programming")
+    print(f"The 'programming' subreddit has {subscribers} subscribers.")
 
 """
 
